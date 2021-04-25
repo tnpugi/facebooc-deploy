@@ -10,7 +10,7 @@ spec:
     name: facebooc
     namespace: facebooc
   interval: 1m0s
-  path: ./kustomize/facebooc/staging
+  path: ./
   prune: true
   sourceRef:
     kind: GitRepository
