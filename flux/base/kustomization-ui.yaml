@@ -1,0 +1,21 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: mmp-ui
+  namespace: flux-system
+spec:
+  healthChecks:
+  - kind: Deployment
+    name: mmp-ui
+    namespace: mmp
+  interval: 1m0s
+  path: ./
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: mmp
+  targetNamespace: mmp
+  timeout: 3m0s
+  validation: client
+

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mmp-ui
+  name: mmp-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mmp-ui
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mmp-ui
+    spec:
+      containers:
+      - image: nginx:latest
+        name: mmp-ui
+        ports:
+        - containerPort: 16000
+        resources: {}
+status: {}

@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: facebooc
-  name: facebooc
+    app: mmp-api
+  name: mmp-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: facebooc
+      app: mmp-api
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: facebooc
+        app: mmp-api
     spec:
       containers:
-      - image: schoolofdevops/facebooc:latest
-        name: facebooc
+      - image: nginx:latest
+        name: mmp-api
         ports:
         - containerPort: 16000
         resources: {}
